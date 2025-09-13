@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+    <FrameLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_container"
+        tools:ignore="MissingConstraints"
+        android:background="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="设置"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/userguide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户教程"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cornerRadius="10dp"
+        app:backgroundTint="#CC262626"
+        app:rippleColor="#ebe0e2"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints"
+        android:gravity="center_horizontal" />
+</LinearLayout>

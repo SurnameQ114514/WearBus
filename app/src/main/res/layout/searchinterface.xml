@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:hint="   请输入站点名称"
+        android:textColor="@color/light_gray"
+        android:textColorHint="@color/light_gray"
+        android:maxLength="10"
+        android:minHeight="48dp"
+        android:background="@drawable/edge"/>
+</LinearLayout>

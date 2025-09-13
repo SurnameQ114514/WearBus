@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WearBus</string>
+    <string name="settings_part1" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dark_mode_title">深色模式</string>
+    <string name="dark_mode_summary">启用夜间界面</string>
+    <string name="theme_color_category">颜色设置</string>
+    <string name="theme_color_title">主题色彩</string>
+    <string name="dynamic_color_title">动态色彩</string>
+    <string name="dynamic_color_summary">跟随壁纸颜色变化</string>
+    <string name="font_style_title">字体样式</string>
+</resources>

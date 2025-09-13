@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="公交"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/black"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nearby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="附近站点"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cornerRadius="10dp"
+        app:backgroundTint="#CC262626"
+        app:rippleColor="#ebe0e2"
+        android:textColor="@color/white" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="搜索"
+        android:id="@+id/search"
+        app:cornerRadius="10dp"
+        app:backgroundTint="#CC262626"
+        app:rippleColor="#ebe0e2"
+        android:textColor="@color/white"/>
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/aaa"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"/>-->
+</LinearLayout>
