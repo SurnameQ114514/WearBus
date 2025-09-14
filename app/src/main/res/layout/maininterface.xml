@@ -37,4 +37,28 @@
         app:backgroundTint="#CC262626"
         app:rippleColor="#ebe0e2"
         android:textColor="@color/white"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="广告位招租"
+        app:cornerRadius="10dp"
+        app:backgroundTint="#CC262626"
+        app:rippleColor="#ebe0e2"
+        android:textColor="@color/white"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="退出"
+        app:cornerRadius="10dp"
+        app:backgroundTint="#CC262626"
+        app:rippleColor="#ebe0e2"
+        android:textColor="@color/white"/>
 </LinearLayout>

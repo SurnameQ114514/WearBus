@@ -36,6 +36,17 @@ public class MainActivity extends AppCompatActivity{
             Intent intent=new Intent(MainActivity.this,SettingsActivity.class);
             startActivity(intent);
         });
+        Button ads = findViewById(R.id.ads);
+        ads.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this,ad.class);
+            startActivity(intent);
+        });
+        Button exit = findViewById(R.id.exit);
+        exit.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this,exit.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        });
     }
 
 }

@@ -24,9 +24,10 @@ public class guideSplashActivity extends AppCompatActivity {
     // 分段文本数组
     private final String[] paragraphs = {
             "欢迎使用腕上公交，这里是用户教程",
-            "1.公交板块\n内有附近站点和搜索板块",
+            "1.公交板块\n可搜索线路",
             "2.设置板块\n目前有用户教程",
-            "3.敬请期待 欢迎加入我们的QQ群150895672"
+            "提示：由于线路uuid工作量巨大，所以如果你在我们提供的uuid列表中没有找到公交线路，请加入qq群并at开发者！",
+            "4.敬请期待 欢迎加入我们的QQ群150895672"
     };
 
     @Override

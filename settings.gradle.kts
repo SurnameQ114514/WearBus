@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        maven { url = uri("https://gitee.com/AbnerAndroid/almighty/") }
         google {
             content {
                 includeGroupByRegex("com\\.android.*")

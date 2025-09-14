@@ -203,3 +203,4 @@ public class Nearby extends AppCompatActivity implements LocationListener {
     @Override public void onProviderEnabled(@NonNull String provider) {}
     @Override public void onProviderDisabled(@NonNull String provider) {}
 }
+

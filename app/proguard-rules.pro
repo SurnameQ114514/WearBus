@@ -19,3 +19,15 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+# 保持数据模型类
+-keep class com.Sumeru.WearBus.BusLineDetail { *; }
+-keep class com.Sumeru.WearBus.Station { *; }
+
+# 保持Parcelable实现
+-keepclassmembers class * implements android.os.Parcelable {
+  public static final ** CREATOR;
+}
+
+# 保持序列化相关类
+-keepnames class com.Sumeru.WearBus.BusLineDetail
+-keepnames class com.Sumeru.WearBus.Station
