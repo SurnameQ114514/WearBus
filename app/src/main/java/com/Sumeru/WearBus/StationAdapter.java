@@ -12,8 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHolder> {
-    private final List<Station> stations;
-
+    private List<Station> stations;
+    public void updateStations(List<Station> newStations) {
+        this.stations = newStations;
+        notifyDataSetChanged();
+    }
     public StationAdapter(List<Station> stations) {
         this.stations = stations != null ? stations : new ArrayList<>();
     }
@@ -30,9 +33,9 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Station station = stations.get(position);
         holder.stationName.setText(station.getName());
+        // 显示实际位置+1（无论正反向）
         holder.stationOrder.setText(String.valueOf(position + 1));
     }
-
     @Override
     public int getItemCount() {
         return stations.size();

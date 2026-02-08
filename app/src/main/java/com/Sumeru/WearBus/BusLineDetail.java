@@ -58,8 +58,8 @@ public class BusLineDetail implements Parcelable {
     @SerializedName("stationnum")
     private int stationnum;
 
-    @SerializedName("totaltime")
-    private int totaltime;
+//    @SerializedName("totaltime")
+//    private int totaltime;
 
     @SerializedName("isbidirectional")
     private int isbidirectional;
@@ -67,8 +67,8 @@ public class BusLineDetail implements Parcelable {
     @SerializedName("linename")
     private String linename;
 
-    @SerializedName("interval")
-    private int interval;
+//    @SerializedName("interval")
+//    private int interval;
 
     @SerializedName("company")
     private String company;
@@ -90,10 +90,10 @@ public class BusLineDetail implements Parcelable {
         startprice = in.readInt();
         increasedprice = in.readInt();
         stationnum = in.readInt();
-        totaltime = in.readInt();
+//        totaltime = in.readInt();
         isbidirectional = in.readInt();
         linename = in.readString();
-        interval = in.readInt();
+//        interval = in.readInt();
         company = in.readString();
     }
 
@@ -115,10 +115,10 @@ public class BusLineDetail implements Parcelable {
         dest.writeInt(startprice);
         dest.writeInt(increasedprice);
         dest.writeInt(stationnum);
-        dest.writeInt(totaltime);
+//        dest.writeInt(totaltime);
         dest.writeInt(isbidirectional);
         dest.writeString(linename);
-        dest.writeInt(interval);
+//        dest.writeInt(interval);
         dest.writeString(company);
     }
 
@@ -194,9 +194,9 @@ public class BusLineDetail implements Parcelable {
     public int getStartprice() { return startprice; }
     public int getIncreasedprice() { return increasedprice; }
     public int getStationnum() { return stationnum; }
-    public int getTotaltime() { return totaltime; }
+//    public int getTotaltime() { return totaltime; }
     public int getIsbidirectional() { return isbidirectional; }
     public String getLinename() { return linename; }
-    public int getInterval() { return interval; }
+//    public int getInterval() { return interval; }
     public String getCompany() { return company; }
 }

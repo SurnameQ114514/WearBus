@@ -43,6 +43,6 @@ public class SplashActivity extends AppCompatActivity {
                     finish();
                 }
             }
-        }, 2000); // 初始延迟500ms
+        }, 500); // 初始延迟500ms
     }
 }

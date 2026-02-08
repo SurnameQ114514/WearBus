@@ -45,12 +45,12 @@
                     android:layout_marginBottom="4dp"/>
 
                 <!-- 发车间隔 -->
-                <TextView
-                    android:id="@+id/tv_interval"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="4dp"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_interval"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:layout_marginBottom="4dp"/>-->
 
                 <!-- 运营时间 -->
                 <TextView
@@ -61,12 +61,12 @@
                     android:layout_marginBottom="4dp"/>
 
                 <!-- 全程时间 -->
-                <TextView
-                    android:id="@+id/tv_travel_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="8dp"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_travel_time"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:layout_marginBottom="8dp"/>-->
 
                 <!-- 票价信息 -->
                 <LinearLayout
@@ -196,6 +196,15 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="8dp"/>
+                <Button
+                    android:id="@+id/btn_reverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="换向"
+                    android:backgroundTint="@color/design_default_color_primary"
+                    android:textColor="@android:color/white"
+                    android:paddingHorizontal="16dp"
+                    android:textAllCaps="false"/>
                 <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

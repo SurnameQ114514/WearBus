@@ -5,22 +5,25 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BusLineDetailActivity extends AppCompatActivity {
     private static final String TAG = "BusLineDetail";
 
-    private TextView tvLineName, tvCompany, tvPrice, tvInterval,
+    private TextView tvLineName, tvCompany, tvPrice,
             tvTravelTime, tvOperateTime, tvSaleType,
             tvTicketRule, tvLineType, tvMonthTicket;
     private RecyclerView rvStations;
     private TextView tvEmptyStations;
-
+    private Button btnReverse;
+    private List<Station> originalStations;
+    private boolean isReversed = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,7 @@ public class BusLineDetailActivity extends AppCompatActivity {
         // 接收数据
         BusLineDetail detail = getIntent().getParcelableExtra("bus_detail");
         if (detail != null) {
+            originalStations = new ArrayList<>(detail.getSafeStation());
             displayBusLineDetail(detail);
             Log.d(TAG, "成功显示线路详情");
         } else {
@@ -39,13 +43,37 @@ public class BusLineDetailActivity extends AppCompatActivity {
             Log.e(TAG, "未接收到线路详情数据");
         }
     }
+    private void reverseStationOrder() {
+        if (originalStations == null || originalStations.isEmpty()) return;
 
+        List<Station> newList = new ArrayList<>();
+        if (isReversed) {
+            // 恢复原始顺序
+            newList.addAll(originalStations);
+        } else {
+            // 创建反向列表（保持原始数据不变）
+            for (int i = originalStations.size() - 1; i >= 0; i--) {
+                newList.add(originalStations.get(i));
+            }
+        }
+
+        // 更新状态
+        isReversed = !isReversed;
+        updateStationList(newList);
+        btnReverse.setText(isReversed ? "恢复正向" : "换向");
+    }
+    private void updateStationList(List<Station> stations) {
+        if (rvStations.getAdapter() != null) {
+            StationAdapter adapter = (StationAdapter) rvStations.getAdapter();
+            adapter.updateStations(stations);
+        }
+    }
     private void initViews() {
         tvLineName = findViewById(R.id.tv_line_name);
         tvCompany = findViewById(R.id.tv_company);
         tvPrice = findViewById(R.id.tv_price);
-        tvInterval = findViewById(R.id.tv_interval);
-        tvTravelTime = findViewById(R.id.tv_travel_time);
+//        tvInterval = findViewById(R.id.tv_interval);
+//        tvTravelTime = findViewById(R.id.tv_travel_time);
         tvOperateTime = findViewById(R.id.tv_operate_time);
         tvSaleType = findViewById(R.id.tv_sale_type);
         tvTicketRule = findViewById(R.id.tv_ticket_rule);
@@ -53,7 +81,8 @@ public class BusLineDetailActivity extends AppCompatActivity {
         tvMonthTicket = findViewById(R.id.tv_month_ticket);
         rvStations = findViewById(R.id.rv_stations);
         tvEmptyStations = findViewById(R.id.tv_empty_stations);
-
+        btnReverse = findViewById(R.id.btn_reverse);
+        btnReverse.setOnClickListener(v -> reverseStationOrder());
         // 修复点：设置LayoutManager
         rvStations.setLayoutManager(new LinearLayoutManager(this) {
             // 修复列表显示不全问题
@@ -73,8 +102,8 @@ public class BusLineDetailActivity extends AppCompatActivity {
         tvLineName.setText(detail.getSafeLinename());
         tvCompany.setText(detail.getSafeCompany());
         tvPrice.setText(detail.getFormattedTicketPrice());
-        tvInterval.setText("发车间隔: " + (detail.getInterval() > 0 ? detail.getInterval() + "分钟" : "未知"));
-        tvTravelTime.setText("全程时间: " + (detail.getTotaltime() > 0 ? detail.getTotaltime() + "分钟" : "未知"));
+//        tvInterval.setText("发车间隔: " + (detail.getInterval() > 0 ? detail.getInterval() + "分钟" : "未知"));
+//        tvTravelTime.setText("全程时间: " + (detail.getTotaltime() > 0 ? detail.getTotaltime() + "分钟" : "未知"));
         tvOperateTime.setText("运营时间: " + detail.getSafeStartTime() + " - " + detail.getSafeEndTime());
         tvSaleType.setText(detail.getFormattedSaleType());
         tvLineType.setText(detail.getFormattedLineType());
