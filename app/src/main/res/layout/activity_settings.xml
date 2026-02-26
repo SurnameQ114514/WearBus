@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 城市选择 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/city_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_save_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存城市"/>
+
+    </LinearLayout>
+
+    <!-- 用户指南按钮 -->
+    <Button
+        android:id="@+id/userguide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户指南"/>
+
+    <!-- 其他设置项可以放在这里 -->
+
+</LinearLayout>

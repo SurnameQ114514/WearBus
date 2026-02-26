@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="@color/black">
+    
+    <!-- 联系方式放在正中间 -->
+    <TextView
+        android:id="@+id/contact_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="喵喵～作者快要吃不起小鱼干了，有没有好心人可以赞助一下喵💕
+联系方式：vx DreamerQ2022 或 QQ 2016319616"/>
+    
+    <!-- 底部隐藏文字保持原位 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="作者快要穷疯了，所以有没有人可以赞助一下喵\n联系方式：15869341193 或 QQ2016319616"/>
-</LinearLayout>
+        android:textColor="#111111"
+        android:textSize="10sp"
+        android:text="RGV2ZWxvcGVyIFNldHRpbmdz=="
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

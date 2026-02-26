@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-</androidx.preference.PreferenceScreen>
+
+    <Preference
+        android:key="pref_reselect_city"
+        android:title="重新选择城市"
+        android:summary="修改当前所在城市，将影响公交线路号查询" />
+
+</androidx.preference.PreferenceScreen> 

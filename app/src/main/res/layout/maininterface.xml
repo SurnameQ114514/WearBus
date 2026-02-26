@@ -26,6 +26,18 @@
         app:rippleColor="#ebe0e2"
         android:textColor="@color/white"/>
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/where_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="去哪里"
+        app:cornerRadius="10dp"
+        app:backgroundTint="#CC262626"
+        app:rippleColor="#ebe0e2"
+        android:textColor="@color/white"/>
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/settings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,6 +57,18 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:text="广告位招租"
+        app:cornerRadius="10dp"
+        app:backgroundTint="#CC262626"
+        app:rippleColor="#ebe0e2"
+        android:textColor="@color/white"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="关于"
         app:cornerRadius="10dp"
         app:backgroundTint="#CC262626"
         app:rippleColor="#ebe0e2"
