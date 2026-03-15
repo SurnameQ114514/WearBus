@@ -1,0 +1,12 @@
+[
+    {
+        "cityUuid": "demo-city-uuid",
+        "lineNumber": "1",
+        "lineUuid": "demo-line-uuid-1"
+    },
+    {
+        "cityUuid": "beijing",
+        "lineNumber": "930",
+        "lineUuid": "23212"
+    }
+]

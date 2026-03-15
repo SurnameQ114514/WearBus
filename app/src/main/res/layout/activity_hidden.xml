@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- 消息显示区域 -->
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:paddingHorizontal="40dp"
+        android:visibility="invisible" />
+
+    <!-- 返回按钮 -->
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="返回"
+        android:backgroundTint="#262626"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:elevation="2dp"
+        android:visibility="invisible" />
+
+    <!-- 注意事项按钮 -->
+    <Button
+        android:id="@+id/btn_notice"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="注意事项"
+        android:backgroundTint="#262626"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/btn_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="2dp"
+        android:visibility="invisible" />
+
+    <!-- 顶部章节选择器 -->
+    <HorizontalScrollView
+        android:id="@+id/chapter_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/btn_back"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:scrollbars="none"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/chapter_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 章节1 -->
+            <LinearLayout
+                android:id="@+id/chapter_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#3a3a3a"
+                    android:rotation="45"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:rotation="-45" />
+                </LinearLayout>
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="1dp"
+                    android:background="#444444"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <!-- 章节2 -->
+            <LinearLayout
+                android:id="@+id/chapter_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#3a3a3a"
+                    android:rotation="45"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:rotation="-45" />
+                </LinearLayout>
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="1dp"
+                    android:background="#444444"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <!-- 章节3 -->
+            <LinearLayout
+                android:id="@+id/chapter_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#3a3a3a"
+                    android:rotation="45"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:rotation="-45" />
+                </LinearLayout>
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="1dp"
+                    android:background="#444444"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <!-- 章节4 -->
+            <LinearLayout
+                android:id="@+id/chapter_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#3a3a3a"
+                    android:rotation="45"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:rotation="-45" />
+                </LinearLayout>
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="1dp"
+                    android:background="#444444"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <!-- 章节5 -->
+            <LinearLayout
+                android:id="@+id/chapter_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#3a3a3a"
+                    android:rotation="45"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:rotation="-45" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 小说正文区域 -->
+    <ScrollView
+        android:id="@+id/novel_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/chapter_scroll"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:elevation="2dp"
+            android:background="@drawable/rounded_corners">
+
+            <TextView
+                android:id="@+id/tv_novel_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="小说标题"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tv_novel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="小说正文内容...\n\n这里将显示小说的具体内容，支持多行显示和滚动查看。\n\n根据章节的不同，这里会显示对应的小说内容。"
+                android:textColor="#e0e0e0"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BGM播放器 -->
+    <LinearLayout
+        android:id="@+id/bgm_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:visibility="invisible">
+
+        <!-- 播放按钮 -->
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#3a3a3a"
+            android:backgroundTint="#3a3a3a"
+            android:src="@mipmap/mp3"
+            android:scaleType="centerInside"
+            android:elevation="4dp"
+            android:layout_marginRight="12dp" />
+
+        <!-- BGM信息 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_bgm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BGM -"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_bgm_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Innocent Snow"
+                android:textColor="#e0e0e0"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

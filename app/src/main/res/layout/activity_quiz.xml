@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e">
+
+    <TextView
+        android:id="@+id/tv_quiz_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#16213e"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="协议小测验"
+        android:textColor="#e94560"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_quiz_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_quiz_title"
+        android:layout_margin="16dp"
+        android:text="第 1/5 题"
+        android:textColor="#888888"
+        android:textSize="14sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/btn_submit"
+        android:layout_below="@id/tv_quiz_progress">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:lineSpacingExtra="6dp"
+                android:text="问题内容"
+                android:textColor="#e0e0e0"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_option_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="#16213e"
+                    android:buttonTint="#e94560"
+                    android:padding="12dp"
+                    android:text="选项 A"
+                    android:textColor="#e0e0e0"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_option_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="#16213e"
+                    android:buttonTint="#e94560"
+                    android:padding="12dp"
+                    android:text="选项 B"
+                    android:textColor="#e0e0e0"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_option_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="#16213e"
+                    android:buttonTint="#e94560"
+                    android:padding="12dp"
+                    android:text="选项 C"
+                    android:textColor="#e0e0e0"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_option_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#16213e"
+                    android:buttonTint="#e94560"
+                    android:padding="12dp"
+                    android:text="选项 D"
+                    android:textColor="#e0e0e0"
+                    android:textSize="15sp" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="#e94560"
+        android:text="提交答案"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+</RelativeLayout>

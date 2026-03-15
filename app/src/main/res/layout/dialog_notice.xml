@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notice_dialog_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <!-- 弹窗内容区域 -->
+    <LinearLayout
+        android:id="@+id/notice_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corners"
+        android:padding="24dp"
+        android:elevation="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="注意事项"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+            <TextView
+                android:id="@+id/tv_notice_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.这里是神秘的滚木版块喵～\n\n2.'Innocent Snow'是Sumeru喵的原创作品，未经许可严禁转载或使用，不然喵会生气的！\n\n3.这里的BGM是Bilibili的@CsLrisEto(领主，孤独，水没，雨之城) 和 @Yoko-cx(Innocent Snow)创作的，Innocent Snow是独占的，不许偷偷拿走喵！"
+                android:textColor="#e0e0e0"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_close_notice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="关闭"
+            android:backgroundTint="#3a3a3a"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

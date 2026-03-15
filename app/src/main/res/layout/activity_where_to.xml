@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="去哪里"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/et_destination"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="输入目的地（如：北京南站、上海虹桥）"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/white"
+        android:background="@drawable/search_box_background"
+        android:paddingHorizontal="16dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_marginBottom="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_plan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="规划路线"
+        app:cornerRadius="10dp"
+        app:backgroundTint="#CC262626"
+        android:textColor="@color/white"
+        android:layout_marginBottom="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_where_to"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_routes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="输入目的地后点击「规划路线」，将从您当前位置规划公交/地铁路线"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:paddingTop="24dp" />
+</LinearLayout>

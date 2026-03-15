@@ -1,0 +1,67 @@
+[
+    {
+        "cityUuid": "beijing",
+        "lineNumber": "1路",
+        "lineUuid": "110000_1"
+    },
+    {
+        "cityUuid": "beijing",
+        "lineNumber": "2路",
+        "lineUuid": "110000_2"
+    },
+    {
+        "cityUuid": "beijing",
+        "lineNumber": "52路",
+        "lineUuid": "110000_52"
+    },
+    {
+        "cityUuid": "shanghai",
+        "lineNumber": "20路",
+        "lineUuid": "310000_20"
+    },
+    {
+        "cityUuid": "shanghai",
+        "lineNumber": "37路",
+        "lineUuid": "310000_37"
+    },
+    {
+        "cityUuid": "shanghai",
+        "lineNumber": "49路",
+        "lineUuid": "310000_49"
+    },
+    {
+        "cityUuid": "guangzhou",
+        "lineNumber": "1路",
+        "lineUuid": "440100_1"
+    },
+    {
+        "cityUuid": "guangzhou",
+        "lineNumber": "2路",
+        "lineUuid": "440100_2"
+    },
+    {
+        "cityUuid": "guangzhou",
+        "lineNumber": "3路",
+        "lineUuid": "440100_3"
+    },
+    {
+        "cityUuid": "shenzhen",
+        "lineNumber": "M200路",
+        "lineUuid": "440300_M200"
+    },
+    {
+        "cityUuid": "shenzhen",
+        "lineNumber": "M390路",
+        "lineUuid": "440300_M390"
+    },
+    {
+        "cityUuid": "hangzhou",
+        "lineNumber": "7路",
+        "lineUuid": "330100_7"
+    },
+    {
+        "cityUuid": "hangzhou",
+        "lineNumber": "27路",
+        "lineUuid": "330100_27"
+    }
+]

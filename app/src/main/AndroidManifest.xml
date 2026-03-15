@@ -9,10 +9,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
-        android:name=".MainApplication"
+        android:name=".utils.MainApplication"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/wdfmsl"
@@ -21,32 +20,71 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.WearBus">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="false">
         </activity>
-        <activity android:name=".Bus"
+        <activity android:name=".activities.Bus"
             android:exported="false" />
-        <activity android:name=".Nearby"
+        <activity android:name=".activities.Nearby"
             android:exported="false"
             tools:ignore="Instantiatable" />
-        <activity android:name=".SettingsActivity"
+        <activity android:name=".activities.SettingsActivity"
             android:exported="false"/>
         <activity
-            android:name=".SplashActivity"
+            android:name=".activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".guideSplashActivity"
+        <activity android:name=".activities.guideSplashActivity"
             android:exported="false"/>
-        <activity android:name=".ad"
+        <activity android:name=".activities.ad"
             android:exported="false"/>
-        <activity android:name=".exit"
+        <activity android:name=".activities.exit"
             android:exported="false"/>
-        <activity android:name=".BusLineDetailActivity"
+        <activity android:name=".activities.BusLineDetailActivity"
             android:label="线路详情"/>
+
+        <activity
+            android:name=".activities.NearbyStationsActivity"
+            android:exported="false"
+            android:label="附近站点" />
+
+        <activity
+            android:name=".activities.NearbyStationDetailActivity"
+            android:exported="false"
+            android:label="站点详情" />
+
+        <activity
+            android:name=".activities.SelectCityActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.WhereToActivity"
+            android:exported="false"
+            android:label="去哪里" />
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:exported="false"
+            android:label="关于" />
+
+        <activity
+            android:name=".activities.HiddenActivity"
+            android:exported="false"
+            android:label="隐藏界面" />
+        
+        <activity
+            android:name=".activities.AgreementActivity"
+            android:exported="false"
+            android:label="用户协议" />
+        
+        <activity
+            android:name=".activities.QuizActivity"
+            android:exported="false"
+            android:label="协议测验" />
     </application>
 
 </manifest>
